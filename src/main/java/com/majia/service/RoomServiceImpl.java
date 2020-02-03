@@ -1,5 +1,6 @@
 package com.majia.service;
 
+import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.majia.enumerate.Direction;
@@ -13,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 @Service
 public class RoomServiceImpl implements IRoomService {
 
-    private LoadingCache<String, MaTable> cache= com.google.common.cache.CacheBuilder
+    private LoadingCache<String, MaTable> cache= CacheBuilder
             .newBuilder()
             .expireAfterAccess(3, TimeUnit.HOURS)
             .weakValues()
