@@ -1,7 +1,6 @@
 package com.majia.model;
 
 import com.majia.enumerate.Action;
-import org.springframework.mail.MailAuthenticationException;
 
 import java.util.*;
 import java.util.stream.Collectors;
